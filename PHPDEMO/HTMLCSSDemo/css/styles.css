@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Nanum+Gothic&family=Zen+Kurenaido&family=Pacifico&family=Zen+Maru+Gothic:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Screen size controls (@media) are at the bottom of the CSS file! --- */
+
+            /* "Global" styling */
+
+html {
+    height: 100%;
+}
+body {
+    background-color:rgb(255, 255, 255);
+    font-family: 'Zen Maru Gothic', sans-serif;
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100%;
+}
+h1, h2 {
+    text-align: center;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 3%;
+}
+h1 {
+    margin-top: 20%;
+}
+a {
+    text-decoration: none;
+}
+
+            /* Header styling (navbar etc) */
+
+.top-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 76px;
+}
+.logo-username {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    align-items: center;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+.logo-container {
+    font-size: 24px;
+    font-family: 'Pacifico', cursive;
+    text-transform: none;
+}
+.username-cont {
+    color: rgb(131, 131, 131);
+}
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    list-style: none;
+    font-size: 18px;
+}
+.navbar a {
+    color: rgb(246, 167, 186);
+}
+.navbar a:hover {
+    color: rgb(216, 131, 151);
+}
+.navbar a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(100, 100, 100);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.navbar a:hover::before {
+    transform: scaleX(1);
+}
+
+            /* Main content styling */
+
+main {
+    height: 100%;
+    flex: auto;
+    position: relative;
+}
+
+.container {
+    min-height: 100%;
+    /* background-color: rgb(236, 247, 247); */
+    flex: auto;
+    position: relative;
+    padding-bottom: 10px;
+    flex: 1 1 auto;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    margin-top: 2%;
+    text-align: justify;
+    text-indent: 14px;
+}
+#landing-text {
+    text-align: center;
+    margin-top: 3%;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+}
+
+            /* Sign up/Log in form */
+
+.center-cont {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+}
+.form-container {
+    text-indent: 0;
+    width: 80%;
+}
+.form-container input {
+    width: 100%;
+    margin-bottom: 2%;
+}
+.form-container button {
+    border: 0;
+    background-color: rgb(246, 167, 186);
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    text-transform: uppercase;
+    padding: 4px;
+    padding-bottom: 6px;
+}
+.button-cont {
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+}
+
+            /* Footer styling */
+
+#footer {
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+    min-height: 32px;
+    position: relative;
+    width: 100%;
+    background-color: rgb(181, 234, 234);
+    color: rgb(131, 131, 131);
+}
+.bot-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+            /* Screen size controls */
+
+@media (min-width: 992px) {
+    .main-container {
+        flex-direction: row;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .top-container {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 24px;
+    }
+    .logo-username {
+        width: 55%;
+        margin-left: 20px;
+        justify-content: space-between;
+    }
+    .logo-container {
+        font-size: 30px;
+    }
+    .navbar a{
+        padding-right: 30px;
+        font-size: 20px;
+    }
+}
+  
